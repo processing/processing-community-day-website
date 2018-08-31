@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Processing Community Day</title>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Processing Community Day" />
+    <link rel="icon" type="image/png" href="img/debug.png" />
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" charset="utf-8"></script>
+
+      <meta property="og:url" content="https://day.processing.org/" />
+      <meta property="og:type" content="article" />
+      <meta property="og:title" content="Processing Community Day" />
+      <meta property="og:description" content="Processing Community Day will bring together members of the community to discuss work and share ideas and experiences." />
+      <meta property="og:image" content="https://day.processing.org/img/facebook-2.jpg" />
+      <meta property="og:image:width" content="1060" />
+      <meta property="og:image:height" content="550" />
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@ProcessingOrg">
+      <meta name="twitter:creator" content="@ProcessingOrg">
+      <meta name="twitter:title" content="Processing Community Day">
+      <meta name="twitter:description" content="Processing Community Day will bring together members of the community to discuss work and share ideas and experiences.">
+      <meta name="twitter:image" content="https://day.processing.org/img/twitter.jpg">
+  </head>
+  <body>
+    <div id="top">
+        <div id="bg-img"></div>
+        <div id="top-content">
+            <h1>Processing <span class="keep-together">Community Day</span></h1>
+            <div id="when">October 21, 2017</div>
+            <div id="where">MIT Media Lab<br />Cambridge, MA</div>
+        </div>
+        <header>
+            <a href="//processingfoundation.org/" target="_blank"><div id="logo"></div></a>
+            <div id="nav">
+              <ul id="nav-list">
+                <li class="nav-link" data-link="about">About</li>
+                <li class="nav-link" data-link="speakers">Speakers</li>
+                <li class="nav-link" data-link="schedule">Schedule</li>
+                <li class="nav-link" data-link="tickets">Tickets</li>
+              </ul>
+            </div>
+            <div id="social">
+                <a href="//www.facebook.com/page.processing" target="_blank"><div id="facebook"></div></a>
+                <a href="//twitter.com/processingOrg" target="_blank"><div id="twitter"></div></a>
+            </div>
+        </header>
+    </div>
+
+    <div id="content-wrapper">
+      <div id="about">
+        <div id="illustration-container">
+          <img id="illustration" src="img/illustration.png" />
+        </div>
+      
+      
+        <p>Imagine a fun block party and an exciting tech conference. Imagine a day when the best two worlds take place at once. That day will be the Processing Community Day. You will meet like minded people who are passionate about programming and community.</p>
+
+        <!-- <p>Morning session will kick off with an introduction by Processing Foundation Board of Directors including <a href="http://benfry.com/" target="_blank">Ben Fry, <a href="http://lauren-mccarthy.com/" target="_blank">Lauren McCarthy, and <a href="http://reas.com/" target="_blank">Casey Reas.</p>
+
+        <p>Processing Fellows will talk about new projects and development on the code base.</p>
+
+        <p>Boxed lunch will be provided; there will be vegetarian options.</p>
+
+        <p>Afternoon sessions will begin with <a href="http://press.uchicago.edu/ucp/books/book/chicago/E/bo18291671.html" target="_blank">Eva Diaz (Art historian, Pratt) who will talk about her book The Experimenters: Chance and Design at Black Mountain College in relation to open source community.</p>
+        <p>
+          <a href="http://shiffman.net/" target="_blank">Daniel Shiffman (Processing Foundation Board of Directors) will present The Coding Train – Live Onstage! 
+        </p>
+        <p>
+          <a href="https://fathom.info" target="_blank">Fathom Information Design (Founded by Ben Fry) will lead a participatory workshop based on their <a href="https://fathom.info/notebook/16750" target="_blank">Information Design class at MIT.
+        </p>
+        <p>
+          <a href="http://johannahedva.com/" target="_blank">Johanna Hedva (Director of Advocacy at the Processing Foundation) and <a href="https://twitter.com/Blackamazon" target="_blank">Sydette Harry (Editor Mozilla network and Editor at Large <a href="https://www.coralproject.net/" target="_blank">Coral) will lead a workshop on online communities possibilities for inclusive open creation.
+        </p>
+        <p>
+          The day will wind down with lightning talks by the community about their projects and ideas.
+        </p>
+        <p>
+          There will be an after party with refreshments. 
+        </p>
+         -->
+        <p>
+          Processing Community Day will be really fun! Don't miss the chance to be part of the very first convening for the Processing Community. If you'd like to read more about the curation and planning process, check out <a href="https://medium.com/@ProcessingOrg/planning-processing-community-day-81eefffafd41" target="_blank">this post by the organizer</a>, Taeyoon Choi.
+        </p>
+        <p>
+          This event is open to people of all ages and familiarity with Processing. We are especially supportive of people with disabilities, deaf and hard of hearing, and disability communities. If you have specific needs, such as sign language interpretation, do not hesitate to contact us at <a href="mailto:day@processing.org" target="_blank">day@processing.org</a>.
+        </p>
+        <p>
+          Please help us spread the word and we hope you can participate. We are planning to organize Processing Community Day annually, in different cities.
+        </p>
+        <p>
+          This event will not be live streamed, but photos and video of select talks and workshops will be available on the <a href="http://processingfoundation.org" target="_blank">Processing Foundation website</a> after the event.
+        </p>
+      </div>
+      <div id="speakers" class="content-container">
+        <h2>Speakers</h2>
+        <div class="speaker-group-title">Processing Foundation Board Members</div>
+        <div class="speaker-group">
+          <!-- Ben -->
+          <div class="speaker">
+            <div class="speaker-pic"><img src="img/speakers/ben.jpg"></div>
+            <div class="speaker-name">Ben Fry</div>
+            <div class="speaker-bio">
+              <p><a href="http://fathom.info/" target="_blank">Ben Fry</a> is principal of Fathom, a design and software consultancy located in Boston. He received his doctoral degree from the Aesthetics + Computation Group at the MIT Media Laboratory, where his research focused on combining fields such as computer science, statistics, graphic design, and data visualization as a means for understanding information. After completing his thesis, he spent time developing tools for visualization of genetic data as a postdoc with Eric Lander at the Eli and Edythe L. Broad Institute of MIT and Harvard. During the 2006–2007 school year, Ben was the Nierenberg Chair of Design for the Carnegie Mellon School of Design. In 2011, he won the National Design Award for Interaction Design from the Cooper-Hewitt. With Casey Reas, Fry initiated Processing in 2001.</p>
+            </div>
+          </div>
+          <!-- Casey -->
+          <div class="speaker">
+            <div class="speaker-pic"><img src="img/speakers/casey.jpg"></div>
+            <div class="speaker-name">Casey Reas</div>
+            <div class="speaker-bio">
+              <p><a href="http://reas.com/" target="_blank">Casey Reas</a> is an artist and educator based in Los Angeles. He has exhibited, screened, and performed his work in galleries and museums around the world. Reas is a professor at the University of California, Los Angeles. He holds a master’s degree from the Massachusetts Institute of Technology in Media Arts and Sciences as well as a bachelor’s degree from the School of Design, Architecture, Art, and Planning at the University of Cincinnati. With Ben Fry, Reas initiated Processing in 2001.
+              </p>
+            </div>
+          </div>
+          <!-- Lauren -->
+          <div class="speaker">
+            <div class="speaker-pic"><img src="img/speakers/lauren.jpg"></div>
+            <div class="speaker-name">Lauren McCarthy</div>
+            <div class="speaker-bio">
+              <p><a href="http://lauren-mccarthy.com/" target="_blank">Lauren McCarthy</a> (p5.js lead) is an artist based in Los Angeles whose work explores current social and technological systems and structures for being a person and interacting with other people. Lauren has exhibited at Ars Electronica, SIGGRAPH, LACMA, and the Japan Media Arts Festival, and worked on installations for the London Eye, US Holocaust Memorial Museum, and the Metropolitan Museum of Art. She holds an MFA from UCLA and a BS Computer Science and BS Art and Design from MIT. She is an Assistant Professor at UCLA Design Media Arts. Lauren joined the Processing Foundation’s Board of Directors in 2015.</p>
+            </div>
+          </div>
+          <!-- Dan -->
+          <div class="speaker">
+            <div class="speaker-pic"><img src="img/speakers/dan.jpg"></div>
+            <div class="speaker-name">Daniel Shiffman</div>
+            <div class="speaker-bio">
+              <p><a href="http://shiffman.net/" target="_blank">Daniel Shiffman</a> works as an Associate Arts Professor at the Interactive Telecommunications Program at NYU’s Tisch School of the Arts. Originally from Baltimore, Daniel received a BA in Mathematics and Philosophy from Yale University and a Master’s Degree from the ITP. He is a director of The Processing Foundation and develops tutorials, examples, and libraries for Processing and p5.js. He is the author of Learning Processing: A Beginner’s Guide to Programming Images, Animation, and Interaction and The Nature of Code (self-published via Kickstarter), an open source book about simulating natural phenomenon in Processing. He can be found talking incessantly on the YouTube about programming.
+                <!-- Daniel Shiffman works as an Associate Arts Professor at the <a href="http://itp.nyu.edu/" target="_blank">Interactive Telecommunications Program at NYU’s <a href="http://www.tisch.nyu.edu/page/home" target="_blank">Tisch School of the Arts. Originally from Baltimore, Daniel received a BA in Mathematics and Philosophy from <a href="http://www.yale.edu/" target="_blank">Yale University and a Master’s Degree from the <a href="http://itp.nyu.edu/" target="_blank">ITP. He is a director of <a href="http://processingfoundation.org/" target="_blank">The Processing Foundation and develops tutorials, examples, and libraries for <a href="http://www.processing.org/" target="_blank">Processing and <a href="http://p5js.org/" target="_blank">p5.js. He is the author of <a href="http://www.learningprocessing.com/" target="_blank">Learning Processing: A Beginner’s Guide to Programming Images, Animation, and Interaction and <a href="http://natureofcode.com/" target="_blank">The Nature of Code (self-published via Kickstarter), an open source book about simulating natural phenomenon in Processing. He can be found <a href="http://youtube.com/user/shiffman" target="_blank">talking incessantly on the YouTube about programming. --></p>
+            </div>
+          </div>
+        </div>
+        <!-- Workshops -->
+        <div class="speaker-group-title">Workshops, Talks &amp; Organizers</div>
+        <div class="speaker-group">
+          <!-- Taeyoon -->
+          <div class="speaker">
+            <div class="speaker-pic"><img src="img/speakers/taeyoon.jpg"></div>
+            <div class="speaker-name">Taeyoon Choi</div>
+            <div class="speaker-bio">
+              <p><a href="http://taeyoonchoi.com/" target="_blank">Taeyoon Choi</a> (Processing Community Day Organizer) is an artist, educator, and activist based in New York and Seoul. His art practice involves performance, electronics, drawings, and installations that form the basis for storytelling in public spaces. He co-founded the School for Poetic Computation where he continues to organize sessions and teach classes. He's currently a fellow at Data and Society Research Institute.</p>
+            </div>
+          </div>
+          <!-- Johanna -->
+          <div class="speaker">
+            <div class="speaker-pic"><img src="img/speakers/johanna.jpg"></div>
+            <div class="speaker-name">Johanna Hedva</div>
+            <div class="speaker-bio">
+              <p><a href="http://johannahedva.com/" target="_blank">Johanna Hedva</a> is a writer, performer, and witch from Los Angeles. Her writing has appeared in <i>Black Warrior Review</i>, <i>Mask Magazine</i>, <i>3:AM</i>, and others. Her novel, <i>On Hell</i>, will be published by Sator Press in 2018. Her project on the politics of disability, <i>This Earth, Our Hospital</i>, includes the essays “Sick Woman Theory” and “In Defense of De-Persons.” She lives in Berlin, where she’s the frontperson of the noise-punk band Important Part. Since 2014, she has worked as the Director of Advocacy for the Processing Foundation.</p>
+            </div>
+          </div>
+          <!-- Sydette Harry -->
+          <div class="speaker">
+            <div class="speaker-pic"><img src="img/speakers/sydette.jpg"></div>
+            <div class="speaker-name">Sydette Harry</div>
+            <div class="speaker-bio">
+              <p><a href="https://twitter.com/Blackamazon" target="_blank">Sydette Harry</a> is technologist, pondérer and writer raised on Far Rockaway train rides by Guyanese warrishness. Her work has appeared in Salon, Bitch, World Policy Journal, The Establishment, make/shift and more. She wonders about how things work aloud. She is currently Editor at Mozilla, Editor at Large with the Coral Project.</p>
+            </div>
+          </div>
+          <!-- Eva -->
+          <div class="speaker">
+            <div class="speaker-pic"><img src="img/speakers/eva.jpg"></div>
+            <div class="speaker-name">Eva Díaz</div>
+            <div class="speaker-bio">
+              <p><a href="http://press.uchicago.edu/ucp/books/book/chicago/E/bo18291671.html" target="_blank">Eva Díaz</a> is Associate Professor of History of Art and Design at the Pratt Institute in Brooklyn. Her book, <i>The Experimenters: Chance and Design at Black Mountain College</i>, was released in 2015 by the University of Chicago Press. She was recently awarded a grant from the Graham Foundation to work on her new book <i>After Spaceship Earth</i>, analyzing the influence of R. Buckminster Fuller in contemporary art. Her writing appears in magazines and journals such as <i>The Art Bulletin</i>, <i>Artforum</i>, <i>Art Journal</i>, <i>Art in America</i>, <i>Cabinet</i>, <i>The Exhibitionist</i>, <i>Frieze</i>, <i>Grey Room</i>, <i>Harvard Design Magazine</i>, and <i>October</i>.</p>
+            </div>
+          </div>
+          <!-- Mark (Fathom) -->
+          <div class="speaker">
+            <div class="speaker-pic"><img src="img/speakers/mark.jpg"></div>
+            <div class="speaker-name">Mark Schifferli</div>
+            <div class="speaker-bio">
+              <p><a href="https://fathom.info/" target="_blank">Mark Schifferli</a> is a developer at Fathom Information Design. Prior to programming, Mark contributed to various ensembles in San Francisco’s experimental music scene as a guitarist and recording engineer. Mark graduated Phi Beta Kappa from Indiana University, Bloomington, with a BA in philosophy and minors in math and French.</p>
+            </div>
+          </div>
+          <!-- Olivia (Fathom) -->
+          <div class="speaker">
+            <div class="speaker-pic"><img src="img/speakers/olivia.jpg"></div>
+            <div class="speaker-name">Olivia Glennon</div>
+            <div class="speaker-bio">
+              <p><a href="http://oliviaglennon.com/" target="_blank">Olivia Glennon</a> is a developer and designer at Fathom Information Design. She started programming at the age of ten in attempt to beautify her Neopets page. She earned a B.F.A from the Cooper Union for the Advancement of Science and Art in New York City.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="speakers-cont" class="content-container">
+        <p>More information on the Processing Fellow, Community Lightning Talks, and Lunch session speakers can be found <a href="https://medium.com/@ProcessingOrg/presenters-at-processing-community-day-ce0f185f15ad" target="_blank">here</a>.<p>
+      </div>
+
+      <div id="schedule" class="content-container">
+        <h2>Schedule</h2>
+        <div class="schedule-row">
+          <div class="schedule-row-left">
+            <div class="schedule-time">10:00 AM</div>
+          </div>
+          <div class="schedule-row-right">
+            <div class="schedule-event-title">Opening Remarks</div>
+            <div class="schedule-event-desc">Taeyoon Choi</div>
+          </div>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-row-left">
+            <div class="schedule-time">10:30 AM</div>
+          </div>
+          <div class="schedule-row-right">
+            <div class="schedule-event-title">Board Member Presentations</div>
+            <div class="schedule-event-desc">Ben Fry, Casey Reas, Lauren McCarthy, Daniel Shiffman, Johanna Hedva</div>
+          </div>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-row-left">
+            <div class="schedule-time">11:00 AM</div>
+          </div>
+          <div class="schedule-row-right">
+            <div class="schedule-event-title">Processing Fellow Presentations</div>
+            <div class="schedule-event-desc">Cassie Tarakajian, Gottfried Haider, Jakub Valtar, Andrés Colubri, Sharon De La Cruz, Aarón Montoya-Moraga and Guillermo Montecinos, Claire Kearney-Volpe and Mathura M Govindarajan</div>
+          </div>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-row-left">
+            <div class="schedule-time">12:00 PM</div>
+          </div>
+          <div class="schedule-row-right">
+            <div class="schedule-event-title">Lunch</div>
+          </div>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-row-left">
+            <div class="schedule-time">12:20 PM</div>
+          </div>
+          <div class="schedule-row-right">
+            <div class="schedule-event-title">Lunch Focus Groups</div>
+            <div class="schedule-event-desc">Chris Coleman, Golan Levin, Tega Brain, Jose Luis Garcia del Castillo</div>
+          </div>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-row-left">
+            <div class="schedule-time">1:00 PM</div>
+          </div>
+          <div class="schedule-row-right">
+            <div class="schedule-event-title">Workshops &amp; Talks</div>
+            <div class="schedule-event-secondary-title">
+              <div class="schedule-room">Main Room</div>
+              Talk: Black Mountain College in relation to open source community
+            </div>
+            <div class="schedule-event-desc"><b>Eva Díaz</b> will talk about her book The Experimenters: Chance and Design at Black Mountain College in relation to open source community.</div>
+
+            <div class="schedule-event-secondary-title">
+              <div class="schedule-room">Room 633</div>
+              Workshop: Online communities + Inclusive open creation
+            </div>
+            <div class="schedule-event-desc"><b>Sydette Harry + Johanna Hedva
+</b> will lead a workshop on possibilities for inclusive open creation in online communities.</div>
+          </div>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-row-left">
+            <div class="schedule-time">2:20 PM</div>
+          </div>
+          <div class="schedule-row-right">
+            <div class="schedule-event-title">Workshops &amp; Talks</div>
+            <div class="schedule-event-secondary-title">
+              <div class="schedule-room">Main Room</div>
+              Talk: Coding Train, Live on Stage! Dan Shiffman
+            </div>
+            <div class="schedule-event-desc"><b>Dan Shiffman</b> will talk about his  popular Youtube channel for learning code with Processing.
+            </div>
+            <div class="schedule-event-secondary-title">
+              <div class="schedule-room">Room 633</div>
+              Workshop: Information Design
+            </div>
+            <div class="schedule-event-desc"><b>Olivia Glennon + Mark Schifferli
+</b> from Fathom Information Design will share their work and lead a workshop on information design.</div>
+          </div>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-row-left">
+            <div class="schedule-time">3:40 PM</div>
+          </div>
+          <div class="schedule-row-right">
+            <div class="schedule-event-title">Community Lightning Talks</div>
+            <div class="schedule-event-desc">
+              Chris Coleman, Rosa Weinberg, Maxime Damecour, Brad Tober, Alex Norton, Jose Luis Garcia del Castillo, Ari Melenciano, Luisa Pereira, R. Luke DuBois , Jonathan Feinberg, Cristobal Valenzuela
+            </div>
+          </div>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-row-left">
+            <div class="schedule-time">4:50 PM</div>
+          </div>
+          <div class="schedule-row-right">
+            <div class="schedule-event-title">Closing Remarks</div>
+          </div>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-row-left">
+            <div class="schedule-time">5:00 PM</div>
+          </div>
+          <div class="schedule-row-right">
+            <div class="schedule-event-title">Reception</div>
+          </div>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-row-left">
+            <div class="schedule-time">6:00 PM</div>
+          </div>
+          <div class="schedule-row-right">
+            <div class="schedule-event-title">After Party</div>
+            <div class="schedule-event-desc">At <a href="http://themeadhall.com/" target="_blank">The Meadhall</a> (2nd floor)</div>
+          </div>
+        </div>
+      </div>
+      <div id="tickets" class="content-container">
+          <h2>Tickets</h2>
+          <a href="https://www.eventbrite.com/e/processing-community-day-tickets-35416345242" target="_blank">Tickets are available here</a>
+      </div>
+      <div id="sponsorship" class="content-container">
+          <h2>We need your help</h2>
+          <p>
+            Processing Community Day will be a new way for us work on our goals, and we need your help to make it happen. If you would like to donate or become a Processing Foundation member, <a href="https://processingfoundation.org/support" target="_blank">please do so here</a>.
+          </p>
+          <p>
+            If you or your organization is interested in becoming a sponsor of Processing Community Day and would like to learn more, contact us at <a href="mailto:day@processing.org" target="_blank">day@processing.org</a>.
+          </p>
+      </div>
+      <div id="sponsors" class="content-container">
+        <h2>Sponsors</h2>
+        <a href="https://www.media.mit.edu/" target="_blank"><div class="sponsor"><img src="img/sponsors/medialab-blue-900.png" /></div></a>
+        <a href="https://fathom.info" target="_blank"><div class="sponsor"><img src="img/sponsors/fathom-blue-900.png" /></div></a>
+        <a href="http://sfpc.io/" target="_blank"><div class="sponsor"><img src="img/sponsors/sfpc-blue-900.png" /></div></a>
+        <a href="http://studioforcreativeinquiry.org/" target="_blank"><div class="sponsor"><img src="img/sponsors/studio-blue-900.png" /></div></a>
+        <a href="http://www.refikanadolstudio.com/" target="_blank"><div class="sponsor"><img src="img/sponsors/ras-blue-900.png" /></div></a>
+        <a href="https://www.du.edu/ahss/edp/" target="_blank"><div class="sponsor"><img src="img/sponsors/denver-blue-900.png" /></div></a>
+        <a href="http://engineering.nyu.edu/grad/idm-ms" target="_blank"><div class="sponsor"><img src="img/sponsors/nyuidm-blue-900.png" /></div></a>
+        <a href="https://tisch.nyu.edu/itp" target="_blank"><div class="sponsor"><img src="img/sponsors/nyu-blue-900.png" /></div></a>
+      </div>
+
+        <!-- <div id="debug"></div> -->
+    </div>
+
+    <script>
+      $(document).ready(function(){
+        $('.nav-link').on('click', function(){
+          var link = $(this).attr('data-link');
+          var new_top = $(window).scrollTop();
+          if(link == 'about'){
+            new_top = $('#about').offset().top;
+          } else if(link == 'speakers'){
+            new_top = $('#speakers').offset().top;
+          } else if(link == 'schedule'){
+            new_top = $('#schedule').offset().top;
+          } else if(link == 'tickets'){
+            new_top = $('#tickets').offset().top;
+          }
+
+          // console.log(link, new_top);
+
+          $('body,html').animate({scrollTop: new_top});
+        });
+      });
+    </script>
+  </body>
+</html>
