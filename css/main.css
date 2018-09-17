@@ -765,35 +765,34 @@ margin-bottom: 50px;
 }
 
 .schedule-row {
+  display: block;
   width: 100%;
-  height: 80px;
-  margin-bottom: 20px;
+  height: 100%;
+  padding-bottom: 5%;
 /*background: green;*/
 }
 .schedule-row-left,
 .schedule-row-right {
   display: inline-block;
   vertical-align: top;
-  float: left;
 }
 .schedule-row-left {
-  width: 20%;
+  width: 15%;
   display: inline-block;
   vertical-align: top;
-  float: left;
 /*  background: yellow;*/
   margin-right: 3%;
 }
 .schedule-row-right {
-  width: 70%;
+  width: 50%;
+  padding-right: 20%;
   display: inline-block;
   vertical-align: top;
-  float: left;
 /*  background: red;*/
 }
 .schedule-time {
   color: #37a06b;
-  text-align: right;
+  text-align: left;
 }
 .schedule-room {
   color: #69b58d;
