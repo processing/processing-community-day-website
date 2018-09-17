@@ -12,12 +12,23 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+      
+    <!-- We'll need to include Google Maps, Handlebars for templating, and jQuery for general futzing about -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAX4GiBFSg_k9ZxAaXcg-hGILcKs4kj6ug" async defer></script>
+      
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0/handlebars.min.js"></script>
+      
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <!-- Tabletop.js for accessing Google Spreadsheets and Mapsheet.js for mapping, of course -->
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+    <script type="text/javascript" src="src/mapsheet.js"></script>
 
     <meta property="og:url" content="https://day.processing.org/pcd-ww.html" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Processing Community Day @ Worldwide" />
     <meta property="og:description" content="Processing Community Day is a day to celebrate art, code, and diversity." />
-<meta property="og:image" content="https://day.processing.org/img/ww-fb.gif" />
+    <meta property="og:image" content="https://day.processing.org/img/ww-fb.gif" />
     <meta property="og:image:width" content="784" />
     <meta property="og:image:height" content="784" />
     <meta name="twitter:card" content="summary_large_image">
@@ -58,7 +69,7 @@
             <div id="nav-mobile-hide">
               <li class="nav-link2"><a href="pcd-la.html">Participate</a></li>
             <li class="nav-link2"><a href="pcd-la-tracks.html">Tracks</a></li>
-                <li class="nav-link2"><a href="pcd-la-opencall.html">Open Call</a></li>
+                 
             </div>
                 
             </ul>
@@ -97,7 +108,7 @@
         </li> 
             
         <li class="nav-link" style="cursor: default; border-bottom: none; padding-bottom: 0;">PCD @ Los Angeles </li>
-            <li class="nav-link2" style="padding-top: 0;"><a href="pcd-la.html">Participate</a> - <a href="pcd-la-tracks.html">Tracks</a> - <a href="tracks.html">Open Call</a>
+            <li class="nav-link2" style="padding-top: 0;"><a href="pcd-la.html">Participate</a> - <a href="pcd-la-tracks.html">Tracks</a>  
         </li>         
  
         <li class="nav-link"><a href="tickets.html">Ticketing</a></li>         
@@ -118,20 +129,61 @@
     <div id="outer-box">
     <div id="inner-box">
         <h2>Processing Community Day @ Worldwide</h2>
-        <div id="icon">
-        <img src="img/pcd19/megaphone.png" alt="drawing of a megaphone">
-        <img src="img/pcd19/earth.png" alt="drawing of an earth">
-        <img src="img/pcd19/black_pcd_logo.gif" alt="PCD logo">
-        </div>
-    
-        <p>
-          The Processing Foundation is currently accepting registration from communities around the world to organize a Processing Community Day in your own city. As a node organizer, you will help define the Processing Community at large by creating programming for your local community. 
-        </p>
-        <p>
-          All registered organizers will receive an Organizer’s Kit, which includes a step-by-step organizing guide, promotion and tutorial packages. We will also support your event through our social media, and provide a platform for you to exchange experience and knowledge with communities around the world.
-        </p>
+        <br>
         
-        <p>Interested in attending? Please join our <a href="https://emailoctopus.com/lists/f88ce28a-7bd2-11e8-a3c9-06b79b628af2/forms/subscribe" target="_blank">newsletter</a> to receive updates on PCD @ Worldwide sites near you.</p>
+ <!-- This is where the map will go -->
+    <div id="map"></div>          
+
+    <!-- Let's make the map not too big -->
+    <style>
+      #map {
+        width: 100%;
+        height: 500px;
+      }
+    </style>
+
+    <!-- This is the popup you'll get when you click a marker. 
+         {{these}} are columns in your spreadsheet -->
+    <script id="popup-template" type="text/x-handlebars-template">
+<!--      <img src="{{image}}">-->
+      <h3>PCD @ {{city}}</h3>
+      <p>When: {{date_time}}</p>
+      <p>Where: {{address}}</p>
+      <p>Organizer(s): {{organizer}}</p>
+      <p>Email: <a href="mailto:{{email}}" target="_top">{{email}}</a></p>
+      <p><a href="{{website}}">{{website}}</a></p>
+    </script>
+
+    <!-- Okay, time to do this! -->
+    <script type="text/javascript">
+      $(window).load( function() {       
+        // Make sure the spreadsheet is published!
+        var published_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1zsGysxKVri_HRIPXkiI_D6vgb7j45nBtOCtJLkQbrQ8/edit?usp=sharing'; 
+
+        // Let's get the popup template and compile it using Handlebars
+        var source   = $("#popup-template").html();
+        var template = Handlebars.compile(source);
+
+        // OK, now let's make the map
+        var map = Mapsheet({
+          key: published_spreadsheet_url,
+          element: "map",
+          popupTemplate: template
+        });
+      });
+      </script>
+ 
+        <h3>Participate in Processing Community Day in one of our node cities</h3>
+        
+        <p>Processing Community Day @ Worldwide currently have 80+ registered node cities around the world. Please look for your nearest city on the map and contact your local organizer directly about attending.</p>
+            
+        <p>Don't see your city on the map? Join our <a href="https://emailoctopus.com/lists/f88ce28a-7bd2-11e8-a3c9-06b79b628af2/forms/subscribe" target="_blank">newsletter</a> to receive updates on PCD @ Worldwide sites near you or consider hosting a Processing Community Day.</p>
+        
+        
+        <h3>Join the 80+ node organizers around the world</h3>
+        <p>
+          The Processing Foundation is currently accepting registration from communities around the world to organize a Processing Community Day in your own city. 
+        </p>
         
         <h4>When?</h4>
         <p>
@@ -145,17 +197,37 @@
         <p>
             This is an open question depending on your local culture and what you have access to, but generally we recommend collaborating with public facilities such as libraries, schools, or community-driven spaces with good, stable Wi-Fi such as community centers, art / culture venues, hackerspaces, cafes, tea houses, or bars. 
         </p>
-        
-        <h4>Promotion</h4>
-        <p>
-            Please use the hashtag <b>#PCD2019</b> when posting on social media so that we can help promote your event. 
-        </p>
           
         <h4>Registration</h4>
         <p>
             The Processing Foundation is currently gathering a list of PCD node organizers around the world through <a href="https://docs.google.com/forms/d/e/1FAIpQLSdfDm821BjQaZRO5xLG3K8UX6zW_oASdGB4_RXd1f4r3ebIgA/viewform" target="_blank">online registration</a>. Registration is important as it helps us keep you posted with useful organizing information and materials, as well as connecting you to other parts of the Processing Community. 
         </p>
         
+        <h4>Support</h4>
+        <p>We are unable to provide financial assistance for the node events, however we will be able to provide an <a href="doc/PCDOrganizer'sKit.pdf">Organizer’s Kit</a>, which includes a step-by-step organizing guide, promotion and tutorial packages. We will also support your event through our social media, and provide a <a href="https://discourse.processing.org/t/pcd-worldwide/1885/18" target="_blank">platform</a> for you to exchange experience and knowledge with communities around the world. Please use the hashtag <b>#PCD2019</b> when posting on social media so that we can help promote your event.   
+        </p>
+        
+        <div class="button_container">
+            
+            <div class="long-button">
+            <a href="doc/PCDOrganizer'sKit.pdf" target="_blank">
+            <h4>Download</h4>
+            <p>Organizer's Kit</p>
+            </a>
+          </div>
+            
+            <div class="long-button">
+            <a href="https://discourse.processing.org/t/pcd-worldwide/1885/18" target="_blank">
+            <h4>Join the conversation!</h4>
+            <p>PCD @ Worldwide Discourse</p>
+            </a>
+          </div>
+          </div>
+
+        
+        <h4>Ticketing</h4>
+        <p>We do not manage or distribute tickets on behalf of our node events. As an organizer, you will determine whether ticketing is a preferable option for your event. We encourage all organizers who are planning to charge a fee for the event to provide affordable options to promote accessibility and inclusivity. 
+        </p>
         <div class="button_container">
           <div class="long-button">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdfDm821BjQaZRO5xLG3K8UX6zW_oASdGB4_RXd1f4r3ebIgA/viewform" target="_blank">
